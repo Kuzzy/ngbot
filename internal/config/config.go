@@ -14,7 +14,7 @@ type (
 		DefaultLanguage  string   `env:"LANG,required"`
 		EnabledHandlers  []string `env:"HANDLERS,required"`
 		LogLevel         int      `env:"LOG_LEVEL,required"`
-		DotPath          string   `env:"DOT_PATH,default=/root/.ngbot"`
+		DotPath          string   `env:"DOT_PATH,default=~/.ngbot"`
 		OpenAI           OpenAI
 	}
 

@@ -1,8 +1,6 @@
 package db
 
 import (
-	"encoding/json"
-	"fmt"
 	"time"
 
 	"github.com/iamwavecut/ngbot/internal/config"
@@ -23,6 +21,8 @@ const (
 	defaultRejectTimeout    = 10 * time.Minute
 )
 
+// TODO: Fixme!!!
+/*
 func (s *Settings) Scan(v interface{}) error {
 	if v == nil {
 		return nil
@@ -36,6 +36,7 @@ func (s *Settings) Scan(v interface{}) error {
 		return fmt.Errorf("cannot scan type %t into Dict", v)
 	}
 }
+*/
 
 // GetLanguage Returns chat's set language
 func (cm *Settings) GetLanguage() (string, error) {
