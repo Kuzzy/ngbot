@@ -298,7 +298,7 @@ func (r *Reactor) checkFirstMessage(ctx context.Context, chat *api.Chat, user *a
 		return nil
 	}
 
-	entry.Info("sending first message to OpenAI for spam check")
+	entry.Info("sending first message to OpenAI for spam check", r.model)
 	llmResp, err := r.llmAPI.CreateChatCompletion(
 		ctx,
 		openai.ChatCompletionRequest{

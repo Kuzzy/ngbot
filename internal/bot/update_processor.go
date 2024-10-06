@@ -124,7 +124,7 @@ func BanUserFromChat(bot *api.BotAPI, userID int64, chatID int64) error {
 			},
 			UserID: userID,
 		},
-		UntilDate:      time.Now().Add(10 * time.Minute).Unix(),
+		UntilDate:      time.Now().Add(30 * time.Minute).Unix(),
 		RevokeMessages: true,
 	}); err != nil {
 		return errors.WithMessage(err, "cant kick")
