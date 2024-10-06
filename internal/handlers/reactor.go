@@ -284,6 +284,8 @@ func (r *Reactor) checkFirstMessage(ctx context.Context, chat *api.Chat, user *a
 			"chat_id":    chat.ID,
 			"user_id":    user.ID,
 			"message_id": m.MessageID,
+			"user_name":  bot.GetUN(user), // Add the username to the log
+			"message":    messageContent,  // Add the banned message content to the log
 		})
 		success, err := banSpammer(chat.ID, user.ID, m.MessageID)
 		if err != nil {
